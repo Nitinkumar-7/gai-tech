@@ -1,0 +1,35 @@
+@media screen and ( max-width:912px ) {
+   
+.imageText{
+   margin-bottom: 18% !important;
+}
+main{
+   margin-top: 1%;
+}
+.slider{
+   height: 100%;
+}
+.content{
+   padding:0px;
+   margin: 0px;
+}
+.container{
+   padding: 0px ;
+   margin-bottom: 10px;
+
+}
+.imagecontent {
+    margin-left: -18%;
+}
+.bluebox {
+    height: 488px;
+}
+#navtab{
+   display: block;
+}
+.prix {
+    
+    margin-left:114px;
+}
+
+}
