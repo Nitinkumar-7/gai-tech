@@ -1,0 +1,37 @@
+.center{
+    border:solid rgb(131, 126, 126) 1px;
+    width:450px;
+    margin:10% auto;
+    /* display:flex;
+    flex-direction:column; */
+
+}
+.inputdivision{
+    overflow:auto;
+    padding: 16px ;
+    background-color:rgb(252, 252, 252);
+   
+  
+}
+.input{
+    width:97%;
+    overflow:auto;
+    height: 36px;
+    /* border-radius:5px; */
+    padding-left:5px;
+    
+}
+.redbackground{
+    background-color:red;
+    color:white;
+    font-size:large;
+    border-radius:8px;
+    border :none;
+}
+.textcenter{
+     text-align:center;
+}
+
+.radiobuttons {
+    margin-left: 70px;
+}

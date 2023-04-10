@@ -1,0 +1,56 @@
+body{
+    background-color:rgb(255 212 234 / 61%);
+    box-sizing: border-box;
+}
+nav{
+    background-color:white;
+}
+.center{
+    border:solid rgb(131, 126, 126) 1px;
+    width:400px;
+    margin:7% auto;
+    overflow:hidden;
+    
+    background-color:rgb(252, 252, 252);
+    /* margin-bottom:none; */
+    /* display:flex;
+    flex-direction:column; */
+
+}
+.order{
+    height:440px;
+
+}
+.colorred{
+    color:red;
+}
+
+.inputdivision{
+    overflow:auto;
+    padding: 16px ;
+    background-color:rgb(252, 252, 252);
+   
+  
+}
+.loginimage{
+    height: 218px;
+    width: 400px;
+}
+.input{
+    width:97%;
+    overflow:auto;
+    height: 36px;
+    /* border-radius:5px; */
+    padding-left:5px;
+    
+}
+.redbackground{
+    background-color:rgb(240 98 129);
+    color:white;
+    font-size:large;
+    border-radius:8px;
+    border :none;
+}
+.textcenter{
+     text-align:center;
+}

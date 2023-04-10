@@ -1,0 +1,694 @@
+*{
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif; 
+
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+#dark-mode-btn {
+  margin: auto 62px;
+  background: #05031a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dark-mode {
+  background: #07051a;
+  color: rgb(10, 58, 189);
+}
+
+
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+
+
+
+
+/* navigation css styling  */
+nav {
+  width: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 2px 9px 2px rgb(226, 226, 226);
+  z-index: 2;
+}
+.logoimgdiv{
+  margin:auto 50px;
+}
+
+ /* .anchor_margin{
+  margin-right:100px;
+
+ } */
+.dropspan{
+  padding-top:30px;
+  position: relative;
+  width:647px;
+  display:block;
+  
+}
+.loginimage{
+  width:100%;
+  height:300px;
+}
+
+.hidden_menu{
+  width:40%;
+  height:300px;
+  line-height:29px;
+  position: absolute;
+  z-index:1;
+  display:none;
+
+}
+.tabledata{
+  padding:0px 10px;
+}
+.green_heading{
+  width:150px;
+}
+
+/* background color css for dropdown content  */
+.hidden_menu_green{
+  background-color: rgb(65, 228, 60);
+}
+.hidden_menu_yellow{
+  background-color: rgb(232, 245, 52);
+}
+.hidden_menu_orange{
+  background-color:rgb(51, 235, 189);
+}
+
+/* hover on navigation  */
+.green:hover .hidden_menu_green{
+  display: block;
+}
+.yellow:hover .hidden_menu_yellow{
+  display: block;
+}
+.orange:hover .hidden_menu_orange{
+  display: block;
+}
+
+/* hover border color  */
+.greendrop:hover{
+  border-bottom-color: rgb(111, 243, 111);
+}
+.yellowdrop:hover{
+  border-bottom-color: rgb(232, 245, 52);
+}
+.orangedrop:hover{
+  border-bottom-color: rgb(51, 235, 189);
+}
+
+
+.link {
+  padding: 32px 60px;
+  height: 80px;
+  display: inline-block;
+}
+
+.link:hover{
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+}
+.marginauto{
+  margin-top:auto;
+}
+
+a{
+text-decoration: none;
+color: black;
+}
+
+/* navigation bar styling css */
+.container1{
+/* background-color:rgb(182, 182, 182); */
+height:80px;
+display:flex;
+justify-content:space-around;
+align-items:center;
+
+}
+.container0{
+  background-color:rgb(253 253 253);
+  height:80px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+ 
+}
+.container2{
+/* background-color:rgb(182, 182, 182); */
+height:80px;
+display:flex;
+justify-content:end;
+/* padding-right: 167px; */
+align-items:center;
+width: 60%;
+}
+/* .size{
+  font-size:40px;
+} */
+.profile{
+  font-size:40px;
+  padding:19px;
+}
+.cart{
+  font-size:40px;
+  padding: 18px 58px;
+
+}
+.drop_profile{
+    display:none;
+    height: 300px;
+    width: 270px;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 8px;
+    top: 80px;
+    right: 14%;
+    box-shadow: 2px 2px 8px 2px #cecece;
+    border-top-color:cyan;
+    border-top-width:4px;
+    border-top-style:solid;
+}
+.profile_div:hover .drop_profile{ 
+  
+  display:block;
+}
+.orange_heading{
+  font-size:14px;
+  color:rgb(255, 81, 0);
+}
+.drop_info
+{
+  font-size:20px;
+  margin:5px;
+}
+.login_button{
+  border:solid rgb(48, 245, 252) 3px;
+  border-radius: 6px;
+  /* background-color: #eeeeee; */
+  padding:4px;
+  font-size:small;
+  background-color: black;
+  color:rgb(45, 150, 248);
+ 
+  /* margin-left:6px; */
+  
+}
+.flexbutton{
+display:flex;
+justify-content: space-around;
+align-items: center;
+height:50%;
+
+}
+.profile_button{
+  /* text-align: center; */
+  margin-top: 10px;
+
+}
+.profile_button_red{
+  border:solid red 2px;
+  color:red;
+}
+.cyantext{
+  color:#24deff;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.hiddencontainer{
+  display:none;
+
+}
+
+/*responsive        ......................................*/
+
+
+@media only screen and (max-width: 1482px) {
+ 
+  .container2{
+    display: none;
+  }
+  .hiddencontainer{
+    display:block;
+    padding: 30px 60px;
+    font-size:x-large;
+  
+  }
+   
+  }
+/*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,navigation searchbar */
+
+.searchBox {
+  position: relative;
+  margin-right: 108px;
+  
+  transform: translate(-0%,-50%);
+  background: #f5f6f7;
+  height: 40px;
+  border-radius: 40px;
+
+}
+
+
+.searchBox:hover > .searchInput {
+  width: 380px;
+  padding-left:22px;
+  margin:0px;
+  
+
+}
+
+.searchBox:hover > .searchButton {
+background: white;
+color : #1512d4;
+}
+
+.searchButton {
+  font-size: 38px;
+  border:none;
+  color: rgb(6 6 6);
+  float: right;
+  width: 0px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: rgb(245, 9, 9);
+  font-size: 16px;
+  transition: 0.4s;
+  /* line-height: 0px; */
+  padding-top:12px;
+  width: 0px;
+  padding-left: 0px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the previous button */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the next button */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, change the background color and add a shadow effect */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+  width: 50px;
+  padding: 0 10px;
+}
+}
+.logoimg{
+width:40px;
+margin-right:14px;
+}
+.reddot{
+  bottom: 16px;
+  left: 112px;
+    font-weight: 700;
+    position: relative;
+  display: inline-block;
+  color: rgb(248, 245, 245);
+  background: red;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  border: solid red 2px;
+
+}
+
+/* slider image start  ***********************************************************/
+
+
+
+/* //////////////////////////////////Slideshow container///////////////////////////////////////// */
+.slideshow-container {
+ width: 100%;
+  position: relative;
+  margin:80px auto 2% auto;
+  top:40px;
+  /* height:30%; */
+
+}
+.slideimg{
+  width:100%;
+  padding: 0;
+  margin: 0px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 5px;
+  width: 5px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+/* media quary for responsive slider */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* slider css ends  ////////////////////////////////////////////////////////////////////*/
+
+/* styling for the brand banner section   */
+.brand_division{
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+ height:80%;
+ 
+}
+.banner{
+  position: sticky;
+  bottom: 28%;
+  right: 0%;
+  width: 100%;
+}
+.brand{ 
+background-color: rgb(1 11 80);
+overflow: hidden; 
+}
+.brandimg {
+  width:70%;
+  height:500px;
+}
+.brandtext {
+  width:30%;
+  height:500px;
+  text-align:center;
+}
+
+h4{
+  font-size: 56px;
+  margin-top:25%;
+  color:orangered;
+  text-shadow: 2px 2px 4px 5px #717171;
+}
+.brand_paragraph{
+  font-size: 50px;
+  padding:10%;
+  color:white;
+}
+
+/* styling for the brand banner section   */
+
+
+/* grid circle images  ####################################  */
+.deals{
+display:flex;
+flex-wrap:wrap;
+justify-content: space-evenly;
+
+}
+.division{
+width:340px;
+height:444px;
+
+}
+.box{
+width:340px;
+height:340px;
+overflow:hidden;
+
+}
+.productimg{
+  border-radius:50%;
+  width:80%;
+  height:80%;
+}
+.flexcircles{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 52px;
+  }
+/* grid circle images  ####################################  */
+
+h2{
+margin: 60px 30px;
+}
+article{
+text-align: center;
+}
+.productdeal{
+width:336px;
+}
+
+.productname{
+margin:30px;
+font-size:x-large;
+}
+
+/*footer styling css ..............................*/
+
+footer{
+  background-color:#eeeeee;
+  margin-top: 60px;
+}
+.flex_foot{
+  position: relative;
+  margin :100px auto;
+  padding:40px;
+  width:60%;
+  line-height: 30px;
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap:3%;
+}
+ul {
+  list-style-type:none;
+}
+h3{
+  margin-bottom: 4%;
+}
+h3.pink{
+  margin-bottom: 4%;
+  color:#e92f70;
+}
+.bottom_margin{
+  margin: 2%;
+} 
+/* css for popular searches  */
+.popular_searches{
+  margin :2px auto;
+  padding:40px;
+  width:60%;
+  text-align: center;
+
+}
+.copywrite{
+  margin-top: 5%;
+}
+.linklocation{
+  color:black;
+}
+
+/* styling for the brand banner section   */
+.brand_division{
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+ height:80%;
+}
+.banner{
+  position: relative;
+  bottom: 28%;
+  right: 0%;
+  width: 100%;
+}
+.brand{ 
+background-color: rgb(1 11 80);
+overflow: hidden; 
+}
+.brandimg {
+  width:70%;
+  height:500px;
+}
+.brandtext {
+  width:30%;
+  height:500px;
+  text-align:center;
+}
+
+h4{
+  font-size: 56px;
+  margin-top:25%;
+  color:orangered;
+  text-shadow: 2px 2px 4px 5px #717171;
+}
+.brand_paragraph{
+  font-size: 50px;
+  padding:10%;
+  color:white;
+}
+/* styling for the brand banner section   */
+
+/* styling for the admin_header.php */
+.navigation_top{
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  height:40px;
+  height: 70px;
+font-size: 20px;
+
+}
+.anchor{
+  display:flex;
+  justify-content: space-evenly;
+  width:40%;
+  align-items:center;
+
+}
+.logo{
+  font-size: 30px;
+}
+span{
+  color:#e92f70;
+}
+/* styling for the admin_header.php */
+/* sxdcfgvhuji************************************************* */
+.main_division_profile {
+  margin: 100px auto 0 auto;
+  width: 80%;
+  border: solid red 2px;
+  /* height: 200px; */
+}
+
+.blackdivision {
+  height: 80px;
+  background-image: linear-gradient(to bottom right, orange, red, yellow);
+  text-align: center;
+  font-size: xx-large;
+  color: white;
+  font-weight: 900;
+  padding-top: 20px;
+
+}
+
+
+.flexclass {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  height: 200px;
+}
+
+.flexboxes {
+  margin: 0px auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+  background: red;
+  display: flex;
+  font-size: xx-large;
+  color: white;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexcontainerbox {
+  width: 280px;
+  text-align: center;
+  padding: 20px;
+}
+
+.cont_div {
+
+  font-size: 25px;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  color: orangered;
+  font-weight: 600;
+}
+/* ////////////////////////////////////////// */
+
+/* pagination button css  */
+
+.paginationbtn{
+  
+  margin-top: 22px;
+  text-align: center;
+}
+.block{
+   border:solid black 2px;
+   padding:15px;
+   border-radius: 6px;
+}
+
+
+/* pagination button css ends  */

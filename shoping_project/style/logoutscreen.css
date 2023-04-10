@@ -1,0 +1,84 @@
+/* css for view_product.php */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.fullbody {
+    margin-top: 90px;
+}
+
+.bigheading {
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.p_text{
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.img_product{
+    max-width: 17%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="number"] {
+    width: 60px;
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 3px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 20px auto 0;
+    cursor: pointer;
+    width: 150px;
+}
+.centerr{
+   text-align: center;
+}
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+input[type="submit"]:active {
+    background-color: #3e8e41;
+    transform: translateY(2px);
+}
+
+/* css for logoutscreen  */
+.center{
+    
+    width:260px;
+    margin:10% auto;
+    overflow:hidden;
+}
+.textcenter{
+    text-align:center;
+}
+.blue {
+    margin-top:8%;
+    color: blue;
+    border: solid blue 4px;
+    font-size: 20px;
+    width: 100px;
+    border-radius: 10px;
+    height: 40px;
+}
