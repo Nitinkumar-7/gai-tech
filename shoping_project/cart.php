@@ -13,6 +13,9 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/cart.css">
     <link rel="stylesheet" href="style/myntra.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>men</title>
 </head>
 
@@ -126,11 +129,26 @@ session_start();
                 } else {
 
                     // if there is no product in cart redirect to the myntra.php 
-                    echo "<script> alert('CART IS EMPTY '); 
+                    if (empty($cart_items)) {
+                        echo '<div class=" modal fade" id="emptyCartModal" tabindex="-1" role="dialog" aria-labelledby="emptyCartModalLabel" aria-hidden="true" data-backdrop="static">';
+                        echo '<div class="popup modal-dialog modal-dialog-centered" role="document">';
+                        echo '<div class="modal-content">';
+                        echo '<div class="modal-header">';
+                        echo '<h3 class="bigtext modal-title" id="emptyCartModalLabel">CART IS EMPTY</h3>';
+                        echo '</div>';
+                        echo '<div class="poppara modal-body">';
+                        echo 'Your cart is currently empty. Please add items to your cart to continue.';
+                        echo '</div>';
+                        echo '<div class="modal-footer">';
+                        echo '<a class= "closebtn btn btn-primary" href="myntra.php" role="button">Go to Myntra</a>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
 
-                        window.location.href = 'myntra.php';
-                        </script>";
-                }
+                        // Show the modal popup using JavaScript
+                        echo '<script>$("#emptyCartModal").modal("show");</script>';
+                    }}
 
                 ?>
 

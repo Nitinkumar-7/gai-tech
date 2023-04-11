@@ -12,6 +12,7 @@
 <body>
     <?php
     // Connect to database
+    session_start();
     include 'configer.php';
     @include 'admin_header.php';
 
@@ -21,7 +22,7 @@
     if (!isset($admin)) {
         header('location:login.php');
     }
-    ;
+    
 
     // Check if form was submitted
     if (isset($_POST['submit'])) {
