@@ -77,13 +77,13 @@ nav {
 
 /* background color css for dropdown content  */
 .hidden_menu_green{
-  background-color: rgb(65, 228, 60);
+  background-color: rgb(255, 255, 255);
 }
 .hidden_menu_yellow{
-  background-color: rgb(232, 245, 52);
+  background-color: rgb(227, 230, 189);
 }
 .hidden_menu_orange{
-  background-color:rgb(51, 235, 189);
+  background-color:rgb(233, 212, 228);
 }
 
 /* hover on navigation  */
@@ -394,7 +394,7 @@ margin-right:14px;
   transition: background-color 0.6s ease;
 }
 
-.active {
+.active, .dot:hover {
   background-color: #717171;
 }
 

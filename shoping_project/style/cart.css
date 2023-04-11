@@ -1,7 +1,7 @@
 .maincontainer{
 padding: 34px;
 
-background:gray;
+background:#e92f7033;
 display: flex;
 justify-content: start;
 gap: 2%;
@@ -128,3 +128,32 @@ input {
 .grand_total{
     font-size:35px;
 }
+
+
+ /* Style the alert box */
+ .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  /* Style the close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /* Change the background color of the close button on hover */
+  .closebtn:hover {
+    color: black;
+  }
