@@ -62,7 +62,7 @@ $phone = $_SESSION['phone'];
               ?>
 
               <span class="dropspan">
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menus">
 
                   <?php
                   // Display categories in a table grouped by category type and name
@@ -112,7 +112,7 @@ $phone = $_SESSION['phone'];
 
 
               <span class='dropspan'>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menus">
 
 
 
@@ -162,7 +162,7 @@ $phone = $_SESSION['phone'];
               }
               ?>
               <span class='dropspan'>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menus">
                   <?php
                   // Display categories in a table grouped by category type and name
                   echo "<table>";

@@ -34,6 +34,10 @@ if (isset($_GET['id'])) {
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="style/logoutscreen.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
             <title>
                 <?php echo $fetch_product['p_name']; ?>
             </title>
@@ -97,9 +101,28 @@ $phone = $_SESSION['phone'];
 // on button click 
 if (isset($_POST['add_to_cart'])) {
     if (!isset($phone)) {
-        echo "<script> alert('Please login to add items in cart!'); 
-        window.location.href = 'login.php';
-        </script>";
+        // echo "<script> alert('Please login to add items in cart!'); 
+        // window.location.href = 'login.php';
+        // </script>";
+
+        echo '<div class=" modal fade" id="emptyCartModal" tabindex="-1" role="dialog" aria-labelledby="emptyCartModalLabel" aria-hidden="true" data-backdrop="static">';
+        echo '<div class="popup modal-dialog modal-dialog-centered" role="document">';
+        echo '<div class="modal-content">';
+        echo '<div class="modal-header">';
+        echo '<h3 class="bigtext modal-title" id="emptyCartModalLabel">Please Login to Add Items In Cart!</h3>';
+        echo '</div>';
+        echo '<div class="poppara modal-body">';
+        echo 'Please Login or Signup And continue your shopping ';
+        echo '</div>';
+        echo '<div class="modal-footer">';
+        echo '<a class= "closebtn btn btn-primary" href="login.php" role="button">LOGIN</a>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+
+        // Show the modal popup using JavaScript
+        echo '<script>$("#emptyCartModal").modal("show");</script>';
     } else {
         // post data
         $u_id = $_POST['u_id'];

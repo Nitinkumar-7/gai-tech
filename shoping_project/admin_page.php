@@ -9,6 +9,27 @@ session_start();
 //  admin nevigation bar is include by admin_header.php
 @include 'admin_header.php';
 
+?>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>dashboard</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- custom admin css file link  -->
+   <link rel="stylesheet" href="style/myntra.css">
+   <link rel="stylesheet" href="style/admin_style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<?php
+
 $admin = $_SESSION['admin'];
 // admin session is create when the admin login by using mobile number 
 
@@ -30,6 +51,24 @@ if (isset($_POST['submit'])) {
    $sql = "INSERT INTO categories (category, category_type, category_name) VALUES ('$category', '$category_type', '$category_name')";
    if (mysqli_query($conn, $sql)) {
       echo "Category added successfully";
+      echo '<div class=" modal fade" id="emptyCartModal" tabindex="-1" role="dialog" aria-labelledby="emptyCartModalLabel" aria-hidden="true" data-backdrop="static">';
+      echo '<div class="popup modal-dialog modal-dialog-centered" role="document">';
+      echo '<div class="modal-content">';
+      echo '<div class="modal-header">';
+      echo '<h3 class="bigtext modal-title" id="emptyCartModalLabel">NEW CATEGORY ADDED </h3>';
+      echo '</div>';
+   
+      echo '<div class="modal-footer">';
+      echo '<a class= "closebtn btn btn-primary" href="admin_page.php" role="button">OK</a>';
+      echo '</div>';
+      echo '</div>';
+      echo '</div>';
+      echo '</div>';
+
+      // Show the modal popup using JavaScript
+      echo '<script>$("#emptyCartModal").modal("show");</script>';
+
+
    } else {
       echo "Error adding category: " . mysqli_error($conn);
    }
@@ -43,20 +82,6 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>dashboard</title>
-
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-   <!-- custom admin css file link  -->
-   <link rel="stylesheet" href="./style/myntra.css">
-   <link rel="stylesheet" href="./style/admin_style.css">
-
-</head>
 
 <body>
 

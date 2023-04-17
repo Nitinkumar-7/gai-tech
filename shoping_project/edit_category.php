@@ -8,6 +8,27 @@ session_start();
 
 // navigation-bar for admin pannel 
 @include 'admin_header.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS IS ADDED BY myntra.css and edit.css  -->
+  <link rel="stylesheet" href="style/myntra.css">
+  <link rel="stylesheet" href="style/edit.css">
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Edit-Category</title>
+</head>
+
+<?php
 
 $admin = $_SESSION['admin'];
 
@@ -39,7 +60,7 @@ if (isset($_GET['id'])) {
 }
 
 // Handle form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['update'])) {
   $category = $_POST['category'];
   $category_type = $_POST['category_type'];
   $category_name = $_POST['category_name'];
@@ -49,30 +70,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $result = mysqli_query($conn, $sql);
 
   if ($result) {
-    // Redirect back to the categories page after successful update
-    header('location:categories.php');
+    
+    echo '<div class=" modal fade" id="emptyCartModal" tabindex="-1" role="dialog" aria-labelledby="emptyCartModalLabel" aria-hidden="true" data-backdrop="static">';
+    echo '<div class="popup modal-dialog modal-dialog-centered" role="document">';
+    echo '<div class="modal-content">';
+    echo '<div class="modal-header">';
+    echo '<h3 class="bigtext modal-title" id="emptyCartModalLabel"> CATEGORY UPDATED </h3>';
+    echo '</div>';
+ 
+    echo '<div class="modal-footer">';
+    echo '<a class= "closebtn btn btn-primary" href="admin_page.php" role="button">OK</a>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+
+    // Show the modal popup using JavaScript
+    echo '<script>$("#emptyCartModal").modal("show");</script>';
+    
   } else {
     echo "Error: " . mysqli_error($conn);
   }
 }
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS IS ADDED BY myntra.css and edit.css  -->
-  <link rel="stylesheet" href="style/myntra.css">
-  <link rel="stylesheet" href="style/edit.css">
-  <!-- font awesome cdn link  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <title>Edit-Category</title>
-</head>
 
 <body>
   <div class="add_product_div">
@@ -81,14 +102,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- form for edit category  -->
     <form class="mainform" action="#" method="POST">
       <label for="category">Category:</label><br>
-      <input class="productinput" type="text" id="category" name="category" value="<?php echo $category; ?>"><br><br>
+      <input class="productinput" type="text" id="category" name="category" value="<?php echo $category; ?>" required><br><br>
       <label for="category_type">Category Type:</label><br>
       <input class="productinput" type="text" id="category_type" name="category_type"
-        value="<?php echo $category_type; ?>"><br><br>
+        value="<?php echo $category_type; ?>" required><br><br>
       <label for="category_name">Category Name:</label><br>
       <input class="productinput" type="text" id="category_name" name="category_name"
-        value="<?php echo $category_name; ?>"><br><br>
-      <input class="productinput" type="submit" value="Update">
+        value="<?php echo $category_name; ?>" required><br><br>
+      <input class="productinput" type="submit" value="Update" name="update">
     </form>
 </body>
 

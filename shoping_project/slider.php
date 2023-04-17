@@ -61,19 +61,22 @@
   <span class="dot"></span> 
 </div>
 <script>
+  //Initializes a variable "slideIndex" to keep track of the current slide.
 let slideIndex = 0;
 showSlides();
-
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
+    // Hides all the slides by setting their display property to "none".
     slides[i].style.display = "none";  
   }
+  //Resets "slideIndex" to 1 if it becomes greater than the number of slides.
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
+    // Updates the display property of the current slide and its corresponding dot to "block" and adds "active" class to the dot for styling.
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";  
@@ -81,7 +84,9 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
+// Takes a parameter "n" to specify the number of slides to move forward or backward.
 function plusSlides(n) {
+  // Updates the "slideIndex" variable accordingly.
   slideIndex += n;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
@@ -90,14 +95,18 @@ function plusSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
+  // Hides all the slides and removes "active" class from all the dots.
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
+  // Displays the current slide and adds "active" class to its corresponding dot.
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
 
+// Takes a parameter "n" to specify the slide number to navigate to.
 function currentSlide(n) {
+  // Updates the "slideIndex" variable accordingly.
   slideIndex = n;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");

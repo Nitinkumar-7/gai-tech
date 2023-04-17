@@ -1,14 +1,36 @@
 <?php
 session_start();
+// session start to use sessions 
 
+// connected with database
+include "configer.php";
 
-
-include "configer.php"; 
-
+// navigationbar is added 
 @include 'navigationbar.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/contact.css">
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>DETAILS</title>
+</head>
+
+
+<?php
 
 $u_id = $_SESSION['u_id'];
-if(!isset($u_id)){
+if (!isset($u_id)) {
     header("Location:login.php");
 }
 
@@ -60,9 +82,9 @@ if (isset($_POST['submit'])) {
             $phoneerr = "DOESN'T EXIST !!";
             $flag = false;
         } else {
-           
-                $phone = test($_POST['phone']);
-            
+
+            $phone = test($_POST['phone']);
+
         }
     }
     if (!preg_match("/^[0-9]{6}+$/", $_POST['pincode'])) {
@@ -87,9 +109,28 @@ if (isset($_POST['submit'])) {
 
         // Execute the SQL statement
         if (mysqli_query($conn, $sql)) {
-            echo "<script> alert('ADDRESS IS UPDATED '); 
-            window.location.href = 'contactdetails.php';
-            </script>";
+            // echo "<script> alert('ADDRESS IS UPDATED '); 
+            // window.location.href = 'contactdetails.php';
+            // </script>";
+
+            echo '<div class=" modal fade" id="emptyCartModal" tabindex="-1" role="dialog" aria-labelledby="emptyCartModalLabel" aria-hidden="true" data-backdrop="static">';
+            echo '<div class="popup modal-dialog modal-dialog-centered" role="document">';
+            echo '<div class="modal-content">';
+            echo '<div class="modal-header">';
+            echo '<h3 class="bigtext modal-title" id="emptyCartModalLabel">YOUR ADDRESS IS UPDATED</h3>';
+            echo '</div>';
+            echo '<div class="poppara modal-body">';
+            echo 'Your Address Is Updated, Continue Your Order';
+            echo '</div>';
+            echo '<div class="modal-footer">';
+            echo '<a class= "closebtn btn btn-primary" href="contactdetails.php" role="button">OK</a>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+
+            // Show the modal popup using JavaScript
+            echo '<script>$("#emptyCartModal").modal("show");</script>';
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -97,17 +138,6 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style/contact.css">
-    <title>DETAILS</title>
-</head>
 
 <body>
     <!-- html form is created below -->
@@ -142,7 +172,8 @@ if (isset($_POST['submit'])) {
 
             <div class="inputdivision  textcenter">
                 <input class="input" value="<?php echo $_SESSION['pincode']; ?>" type="text" name="pincode"
-                    placeholder="Pin Code*" required><span>
+                    placeholder="Pin Code*" required>
+                <span>
                     <?php echo $pin_codeerr; ?>
                 </span>
             </div>
@@ -153,8 +184,8 @@ if (isset($_POST['submit'])) {
             </div>
 
             <div class="inputdivision textcenter">
-                <input class="input" value="<?php echo $_SESSION['city']; ?>" type="text" name="city"
-                    placeholder="City" required>
+                <input class="input" value="<?php echo $_SESSION['city']; ?>" type="text" name="city" placeholder="City"
+                    required>
             </div>
 
             <div class="inputdivision textcenter">
