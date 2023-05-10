@@ -12,7 +12,7 @@ session_start();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style/men.css">
   <link rel="stylesheet" href="style/myntra.css">
-  <title>men</title>
+  <title>women</title>
 </head>
 
 <body>

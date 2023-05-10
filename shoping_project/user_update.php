@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/myntra.css">
+    <!-- two files are used to style this page  -->
+    <link rel="stylesheet" href="style/update.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Update User</title>
+</head>
+
 <?php
 
 session_start();
@@ -9,7 +25,7 @@ if (!isset($u_id)) {
 }
 
 $u_id = $_SESSION['u_id'];
-$name = $_SESSION['user_name'];
+$user_name = $_SESSION['user_name'];
 $email = $_SESSION['email'];
 $phone = $_SESSION['phone'];
 
@@ -27,10 +43,12 @@ if (isset($_POST['update'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-        echo "User updated successfully!";
-    } else {
-        echo "Error updating user: " . mysqli_error($conn);
+        echo "<script>alert('User updated successfully!');</script>";
+    } 
+    else {
+        echo "<script>alert('Error updating user: " . mysqli_error($conn) . "');</script>";
     }
+    
 
     // Close the database connection
     mysqli_close($conn);
@@ -38,32 +56,18 @@ if (isset($_POST['update'])) {
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style/myntra.css">
-    <!-- two files are used to style this page  -->
-    <link rel="stylesheet" href="style/update.css">
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Update User</title>
-</head>
 
 <body>
     <div class="containergg">
         <h1 class="headingtwo">Update User</h1>
-        <form class='updateform' method="post" action="update_user.php">
+        <form class='updateform' method="post" action="#">
 
             <label for="phone">Phone:</label>
             <input type="text" value=<?php echo $phone; ?> name="phone" required><br>
 
             <label for="user_name">User Name:</label>
-            <input type="text" value=" <?php echo $name; ?> " name="user_name" required><br>
+            <input type="text" value=" <?php echo $user_name; ?> " name="user_name" required><br>
 
             <label for="email">Email:</label>
             <input type="email" value=" <?php echo $email; ?>" name="email" required><br>

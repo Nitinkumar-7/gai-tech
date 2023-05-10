@@ -38,7 +38,7 @@ session_start();
     }
 
     // navigation bar is included 
-    @include 'navigationbar.php';
+    @include    'navigationbar.php';
 
 
     if (isset($_GET['cart_id'])) {
